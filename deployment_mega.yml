@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mega-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mega-app
+  template:
+    metadata:
+      labels:
+        app: mega-app
+    spec:
+      containers:
+      - name: mega-container
+        image: mega:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 6003
+          name: mega-port
+        resources: {}
