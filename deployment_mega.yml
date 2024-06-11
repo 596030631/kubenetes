@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mega-container
-        image: mega:latest
+        image: registry.cn-hangzhou.aliyuncs.com/sjspace/mega:v1.0.107
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 6003
